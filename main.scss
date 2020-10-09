@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+}
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 70px;
+    }
+    span {
+        margin-top: 50px;
+        font-size: 50px;
+    }
+}
+.main_content{ 
+    display: flex;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.text__wrapper {
+    display: flex;
+    align-items: center;
+}
+.card {    
+    display: flex;
+    padding: 20px;
+    img {
+        border: 6px solid hotpink;
+        border-radius: 6%;
+        box-shadow: 13px 13px 20px 1px #000000;
+    }
+}

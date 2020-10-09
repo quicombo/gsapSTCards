@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/main.css">
+    <title>different animations</title>
+</head>
+<body>
+    <section class="header">
+        <h1>Начинаем скроллить вниз</h1>
+        <span class="scroll__icon">▼</span>
+    </section>
+    <section class="main_content ">
+        <div class="card from_left reveal">
+            <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+        </div>        
+        <div class="text__wrapper">
+            <div class="text reveal">
+                <h1>Поехали ниже</h1>
+                Какой-то текст, какой не важно абсолютно, ведь тут дело в другом. 
+                Дело в скроллтригере и прочей штуке
+            </div>
+        </div>
+    </section>
+    <section class="main_content ">
+        <div class="text__wrapper">
+            <div class="text reveal">
+                <h1>Поехали еще ниже</h1>
+                Какой-то текст, какой не важно абсолютно, ведь тут дело в другом. 
+                Дело в скроллтригере и прочей штуке
+            </div>
+        </div>
+        <div class="card from_right reveal">
+            <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+        </div>        
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="script/main.dev.js"></script>
+</body>
+</html>
