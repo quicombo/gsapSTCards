@@ -1,3 +1,8 @@
+gsap.to('.scroll__icon', {
+    y: 50,
+    yoyo: true,
+    repeat: -1
+});
 function animateFrom(elem, direction){
     direction = direction | 1;  // тип если второй параметр отсутсвует - то 1, если есть, то то самое
     let x = 0;

@@ -1,9 +1,13 @@
 "use strict";
 
+gsap.to('.scroll__icon', {
+  y: 50,
+  yoyo: true,
+  repeat: -1
+});
+
 function animateFrom(elem, direction) {
-  direction = direction | 1; // тип если второй параметр отсутсвует 
-  //- то 1, если есть, это значит что мы возвращаемся снизу страницы и элемент
-  // появляется сверху)
+  direction = direction | 1; // тип если второй параметр отсутсвует - то 1, если есть, то то самое
 
   var x = 0;
   var y = direction * 100;
@@ -37,18 +41,18 @@ function hide(elem) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger); //регистрируем плагин скролтригер
-  gsap.utils.toArray(".reveal").forEach(function (elem) { //всё в массив (шоб для всех)
-    hide(elem); //прячем если не во вью порте
-    ScrollTrigger.create({ //создаём скролл тригер
-      trigger: elem, // тригер для начала анимации (наш элемент)
-      onEnter: function onEnter() { // если появляется во вьюпорте запускаем
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".reveal").forEach(function (elem) {
+    hide(elem);
+    ScrollTrigger.create({
+      trigger: elem,
+      onEnter: function onEnter() {
         animateFrom(elem);
       },
-      onEnterBack: function onEnterBack() { //если возвращаемся и появляемся во вьюпорте
+      onEnterBack: function onEnterBack() {
         animateFrom(elem, -2);
       },
-      onLeave: function onLeave() { //прячем, если не во вьюпорте
+      onLeave: function onLeave() {
         hide(elem);
       }
     });
